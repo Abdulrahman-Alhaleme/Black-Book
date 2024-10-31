@@ -1,0 +1,379 @@
+
+:root{
+    --clr-text:#fff;
+    --clr-red: red;
+
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+@font-face {
+    font-family: pop;
+    src: url(./Fonts/Poppins-Medium.ttf);
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.header{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: pop;
+    flex-direction: row;
+    margin-top: 20px;
+}
+
+ul{
+    display: flex;
+    justify-content: space-between;
+    width: 600px;
+
+}
+ul li{
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+ul li .icon{
+    font-size: 35px;
+    color: red;
+    margin: 0 60px;
+}
+ul li .text{
+    font-size: 20px;
+    font-weight: 900;
+}
+
+
+
+ul li .progress{
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background-color: rgb(211, 121, 121);
+    margin: 14px 0;
+    display: grid;
+    place-items: center;
+    color: #fff;
+    position: relative;
+    cursor: pointer;
+}
+.progress::after{
+    content: " ";
+    position: absolute;
+    width: 78px;
+    height: 5px;
+    background-color: rgb(211, 121, 121);
+    right: 60px;
+}
+.one::after{
+    width: 0;
+    height: 0;
+}
+ul li .progress .uil{
+    display: none;
+}
+ul li .progress p{
+    font-size: 24px;
+    font-weight: bold;
+}
+
+
+
+ul li .active{
+    background-color: red;
+    display: grid;
+    place-items: center;
+    z-index: 100;
+}
+li .active::after{
+    background-color: red;
+}
+ul li .active p{
+    display: none;
+}
+ul li .active .uil{
+    font-size: 20px;
+    display: flex;
+}
+
+.button1{
+    margin-left: 45px;
+}
+.button1 p{
+    font-size: 30px;
+    margin-bottom: 10px;
+}
+.button1 button{
+    height: 35px;
+    width: 120px;
+    border-radius: 8px;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(23, 160, 71);
+    color: #fff;
+    font-weight: bold;
+    font-size: 20px;
+    border: none;
+    cursor: pointer;
+}
+
+
+
+
+.slider{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    width: 100%;
+    flex-direction: column;
+}
+.slider-header h2{
+    margin-bottom: 20px;
+    font-size: 50px;
+    font-weight: bold;
+    margin-left: 20px;
+}
+.slider-header{
+display: flex;
+flex-direction: row;
+align-items: center;
+justify-content: center;
+}
+.recipe-container{
+    background: rgba(220, 220, 220, 0.1);
+    border-radius: 25px;
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(30px);
+    -webkit-backdrop-filter: blur(30px);
+    padding: 50px;
+    width: min(1200px , 95%);
+}
+
+.swiper{
+width: 100%;
+height: 100%;
+
+}
+
+.swiper-slide{
+    max-width: 400px;
+    margin-bottom: 16px;
+}
+
+.swiper-slide img{  
+    aspect-ratio: 4/3;
+    object-fit: cover;
+    border-radius: 6px;
+    user-select: none;
+    pointer-events: none;
+}
+.swiper-scrollbar{
+    --swiper-scrollbar-bottom:0;
+    --swiper-scrollbar-drag-bg-color:var(--clr-red);
+    --swiper-scrollbar-size:7px;
+
+}
+
+.line{
+    height: 3px;
+    width: 900px;
+    background-color: black;
+    margin: 30px 0;
+}
+
+.container {
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    cursor: pointer;
+}
+
+
+
+.half-circle {
+    width: 120px; 
+    height: 30px; 
+    background-color: rgba(204, 204, 204, 0.9); 
+    border-radius: 100px 100px 0 0; 
+    display: flex;
+    justify-content: center;
+    align-items: flex-end; 
+    position: absolute; 
+}
+
+.arrow {
+    font-size: 30px; 
+}
+.download{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 16px;
+}
+.download p{
+font-size: 25px;
+font-weight: bold;
+}
+
+.download-btn{
+    background-color:rgb(41, 171, 226) ;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    height: 80px;
+    width: 400px;
+    border: none;
+    border-radius: 10px;
+    color: #fff;
+    gap: 12px;
+    font-size: 50px;
+    font-weight: bold;
+    box-shadow: 1px 6px 20px 0px gray;
+    cursor: pointer;
+}
+.download-btn p{
+    font-size:40px;
+}
+.btn-row{
+    display: flex;
+    flex-direction: row-reverse;
+    gap: 12px;
+}
+.btn-row svg{
+    height: 70px;
+    width: 70px;
+}
+.download-section{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+}
+.d-btn{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+    margin: 40px 0;
+    margin-left: 70px;
+}
+.d-btn p{
+    font-size: 25px;
+font-weight: bold
+}
+.dd-btn{
+    background-color:rgb(41, 171, 226) ;
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: center;
+    align-items: center;
+    height: 70px;
+    width: 325px;
+    border: none;
+    border-radius: 10px;
+    color: #fff;
+    gap: 12px;
+    font-size: 35px;
+    font-weight: bold;
+    box-shadow: 1px 6px 20px 0px gray;
+    cursor: pointer;
+}
+/* Responsive Css  */
+
+@media (max-width: 980px) {
+    .container{
+        display: none;
+    }
+
+    .line{
+        display: none;
+    }
+    ul{
+        flex-direction: column;
+        width: 250px;
+        gap: 20px;
+        margin-bottom: 20px;
+    }
+    ul li{
+        flex-direction: row;
+        
+    }
+    ul li .progress{
+        margin: 0 30px;
+       
+    }
+    ul li .progress{
+        height: 50px;
+        width: 50px;
+    }
+    .progress::after{
+        width: 5px;
+        height: 55px;
+        bottom: 30px;
+        left: 50%;
+        transform: translateX(-50%);
+        z-index: -1;
+    }
+    .one::after{
+        height: 0;
+    }
+    ul li .icon{
+        margin: 15px 0;
+    }
+    .header{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+@media (max-width:600px) {
+    .head .head_1{
+        font-size: 24px;
+    }
+    .head .head_2{
+        font-size: 16px;
+    }
+    .dd-btn{
+        margin-right: 50px;
+        height: 60px;
+        width: 250px;
+    }
+    .d-btn p{
+        font-size: 20px;
+        font-weight: bold;
+        margin-right: 50px;
+    }
+    .download-btn{
+        height: 60px;
+        width: 250px;
+        font-size: 30px;
+    }
+    .download-btn p{
+        font-size: 20px;
+    }
+    .download p{
+        font-size: 15px;
+    }
+}
+
